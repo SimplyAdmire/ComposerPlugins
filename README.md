@@ -1,4 +1,3 @@
-================
 Composer Plugins
 ================
 
@@ -6,14 +5,13 @@ A collection of composer plugins for specific installation instruction
 for composer packages.
 
 PHP Codesniffer Standard installer
-==================================
+----------------------------------
 
 The PHP Codesniffer Standard installer is able to install phpcs codesniffer
 standards into the `<vender>/squizlabs/php_codesniffer/CodeSniffer/Standards/`
 folder. By doing so the standard will be usable by calling `bin/phpcs --standard <standard>`.
 
-How To Use
-----------
+### How To Use
 
 * Find the package containing the codesniffs you want to use. This package should be
   a normal Codesniffing package containing a `ruleset.xml` and a `composer.json`.
@@ -24,8 +22,7 @@ How To Use
 * Now add the package as a development dependency to your project
 * Run `bin/phpcs -i` and see your standard listed
 
-Naming Rules
-------------
+### Naming Rules
 
 The name of the standard is derived from the composer packagekey. The part after the `/`
 is taken as standard name. The first character is made uppercase, and all characters after
@@ -35,7 +32,7 @@ a `-` will be uppercased. So:
 * `vendor/some-more-words` becomes `SomeMoreWords`
 
 TYPO3 Specific
-==============
+--------------
 
 The TYPO3 community already has packages available on packagist, and as renaming packagenames
 would be a bad practice we added 3 hardcoded standard names. Also the vendor name `TYPO3` will
