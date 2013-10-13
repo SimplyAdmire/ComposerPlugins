@@ -13,7 +13,7 @@ class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 
 		$packageKeyParts = explode('/', $package->getPrettyName(), 2);
 
-		$codeStandardName = str_replace('typo3', 'TYPO3', $packageKeyParts[1]);
+		$codeStandardName = str_replace('typo3', 'TYPO3', ucfirst($packageKeyParts[1]));
 		$codeStandardName = preg_replace_callback('/-([a-z]{1})/', function($matches) { return strtoupper($matches[1]); }, $codeStandardName);
 
 		// Fixed mapping for TYPO3 codesniffers
