@@ -47,11 +47,15 @@ changes upstream into the main repository as soon as possible.
 So for sniffing your TYPO3 Flow or TYPO3 Neos project, add the following repositories to your
 composer.json:
 
+```json
 	{"type": "git", "url": "https://github.com/SimplyAdmire/TYPO3Flow.git"},
 	{"type": "git", "url": "https://github.com/SimplyAdmire/TYPO3SniffPool.git"}
+```
 
 After that add a development requirement for the package `typo3-ci/typo3flow`.
 
 Now you can sniff your packages with for example:
 
+```
 	bin/phpcs --extensions=php --standard=TYPO3Flow Packages/Application/My.Package
+```
