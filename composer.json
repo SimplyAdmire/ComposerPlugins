@@ -1,0 +1,26 @@
+{
+	"name": "simplyadmire/composer-plugins",
+	"type": "composer-plugin",
+	"license": "LGPL-3.0+",
+	"authors": [
+		{
+			"name": "Rens Admiraal",
+			"email": "rens@simplyadmire.com",
+			"role": "lead"
+		}
+	],
+	"autoload": {
+		"psr-0": {
+			"SimplyAdmire\\ComposerPlugins": ""
+		}
+	},
+	"extra": {
+		"class": [
+			"SimplyAdmire\\ComposerPlugins\\PhpCodesnifferStandardInstallerPlugin"
+		]
+	},
+	"require": {
+		"composer-plugin-api": "1.0.0",
+		"squizlabs/php_codesniffer": "*"
+	}
+}
