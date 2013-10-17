@@ -38,18 +38,18 @@ The TYPO3 community already has packages available on packagist, and as renaming
 would be a bad practice we added 3 hardcoded standard names. Also the vendor name `TYPO3` will
 always be enforced to be uppercase.
 
-If you want to use the Flow sniffs you need to use our forks of the rules, we hope to get the
-changes upstream into the main repository as soon as possible.
+To include the TYPO3 CGL to your project you can use one of the following commands (depending
+on the CGL you want to use, TYPO3 Flow or TYPO3 CMS):
 
-So for sniffing your TYPO3 Flow or TYPO3 Neos project, add the following repositories to your
-composer.json:
-
-```json
-	{"type": "git", "url": "https://github.com/SimplyAdmire/TYPO3Flow.git"},
-	{"type": "git", "url": "https://github.com/SimplyAdmire/TYPO3SniffPool.git"}
+TYPO3 Flow:
+```
+	composer require --dev typo3-ci/typo3flow=dev-master
 ```
 
-After that add a development requirement for the package `typo3-ci/typo3flow`.
+TYPO3 CMS:
+```
+	composer require --dev typo3-ci/typo3cms=dev-master
+```
 
 Now you can sniff your packages with for example:
 
