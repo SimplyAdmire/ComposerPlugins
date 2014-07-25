@@ -14,7 +14,7 @@ class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 		$codeSnifferStandardsPathParts = array('squizlabs', 'php_codesniffer', 'CodeSniffer', 'Standards');
 		$targetPath .= DIRECTORY_SEPARATOR . implode(DIRECTORY_SEPARATOR, $codeSnifferStandardsPathParts) . DIRECTORY_SEPARATOR;
 
-		$packageKeyParts = explode(DIRECTORY_SEPARATOR, $package->getPrettyName(), 2);
+		$packageKeyParts = explode('/', $package->getPrettyName(), 2);
 
 		$codeStandardName = str_replace('Typo3', 'TYPO3', ucfirst($packageKeyParts[1]));
 		$codeStandardName = preg_replace_callback('/-([a-z]{1})/', function($matches) { return strtoupper($matches[1]); }, $codeStandardName);
