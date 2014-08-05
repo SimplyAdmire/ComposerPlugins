@@ -8,7 +8,7 @@ PHP Codesniffer Standard installer
 ----------------------------------
 
 The PHP Codesniffer Standard installer is able to install phpcs codesniffer
-standards into the `<vender>/squizlabs/php_codesniffer/CodeSniffer/Standards/`
+standards into the `<vendor>/squizlabs/php_codesniffer/CodeSniffer/Standards/`
 folder. By doing so the standard will be usable by calling `bin/phpcs --standard <standard>`.
 
 ### How To Use
