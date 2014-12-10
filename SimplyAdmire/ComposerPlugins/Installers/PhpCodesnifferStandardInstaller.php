@@ -6,13 +6,13 @@ use Composer\Installer\LibraryInstaller;
 
 class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 
-	public function getPackageBasePath(PackageInterface $package) {
-		$targetPathParts = explode(DIRECTORY_SEPARATOR, parent::getPackageBasePath($package));
-		$targetPathParts = array_splice($targetPathParts, 0, -2);
-		$targetPath = DIRECTORY_SEPARATOR . implode(DIRECTORY_SEPARATOR, $targetPathParts);
+	protected function getPackageBasePath(PackageInterface $package) {
+		$this->initializeVendorDir();
+
+		$targetPath = ($this->vendorDir ? $this->vendorDir.'/' : '');
 
 		$codeSnifferStandardsPathParts = array('squizlabs', 'php_codesniffer', 'CodeSniffer', 'Standards');
-		$targetPath .= DIRECTORY_SEPARATOR . implode(DIRECTORY_SEPARATOR, $codeSnifferStandardsPathParts) . DIRECTORY_SEPARATOR;
+		$targetPath .= implode(DIRECTORY_SEPARATOR, $codeSnifferStandardsPathParts) . DIRECTORY_SEPARATOR;
 
 		$packageKeyParts = explode('/', $package->getPrettyName(), 2);
 
