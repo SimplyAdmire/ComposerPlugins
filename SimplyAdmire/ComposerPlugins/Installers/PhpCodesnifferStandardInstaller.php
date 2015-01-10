@@ -23,7 +23,10 @@ class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 		$codeStandardName = str_replace('TYPO3sniffpool', 'TYPO3SniffPool', $codeStandardName);
 		$codeStandardName = str_replace('TYPO3cms', 'TYPO3CMS', $codeStandardName);
 		$codeStandardName = str_replace('TYPO3flow', 'TYPO3Flow', $codeStandardName);
-
+		
+		// Fixed mapping for PrestaShop coding standard
+		$codeStandardName = str_replace('PrestashopCodingstandard', 'Prestashop', $codeStandardName);
+		
 		return $targetPath . $codeStandardName;
 	}
 
