@@ -9,7 +9,7 @@ class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 	protected function getPackageBasePath(PackageInterface $package) {
 		$this->initializeVendorDir();
 
-		$targetPath = ($this->vendorDir ? $this->vendorDir.'/' : '');
+		$targetPath = $this->vendorDir ? $this->vendorDir . '/' : '';
 
 		$codeSnifferStandardsPathParts = array('squizlabs', 'php_codesniffer', 'CodeSniffer', 'Standards');
 		$targetPath .= implode(DIRECTORY_SEPARATOR, $codeSnifferStandardsPathParts) . DIRECTORY_SEPARATOR;
@@ -23,10 +23,10 @@ class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 		$codeStandardName = str_replace('TYPO3sniffpool', 'TYPO3SniffPool', $codeStandardName);
 		$codeStandardName = str_replace('TYPO3cms', 'TYPO3CMS', $codeStandardName);
 		$codeStandardName = str_replace('TYPO3flow', 'TYPO3Flow', $codeStandardName);
-		
+
 		// Fixed mapping for PrestaShop coding standard
 		$codeStandardName = str_replace('PrestashopCodingstandard', 'Prestashop', $codeStandardName);
-		
+
 		return $targetPath . $codeStandardName;
 	}
 
