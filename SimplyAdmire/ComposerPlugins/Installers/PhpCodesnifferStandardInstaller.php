@@ -4,8 +4,16 @@ namespace SimplyAdmire\ComposerPlugins\Installers;
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 
+/**
+ * This installer installs code sniffing standards in the Standards/ folder
+ * of the squizlabs/php_codesniffer package
+ */
 class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 
+	/**
+	 * @param PackageInterface $package
+	 * @return string
+	 */
 	protected function getPackageBasePath(PackageInterface $package) {
 		$this->initializeVendorDir();
 
@@ -39,5 +47,3 @@ class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 	}
 
 }
-
-?>
