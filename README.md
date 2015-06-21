@@ -4,6 +4,10 @@ Composer Plugins
 A collection of composer plugins for specific installation instruction
 for composer packages.
 
+Important: if you are running on Flow 3+ and have the typo3/ci-flow package installed
+using your main distributions composer.json you should remove it there and install
+the codesniffer in a separate folder, like for example: https://git.typo3.org/Neos/Distributions/Base.git/tree/refs/heads/master:/Build/PhpCodesniffer
+
 PHP Codesniffer Standard installer
 ----------------------------------
 
