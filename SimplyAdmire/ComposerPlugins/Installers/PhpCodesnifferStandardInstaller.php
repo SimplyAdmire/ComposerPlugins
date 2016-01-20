@@ -14,6 +14,14 @@ class PhpCodesnifferStandardInstaller extends LibraryInstaller {
 	 * @param PackageInterface $package
 	 * @return string
 	 */
+	public function getInstallPath(PackageInterface $package) {
+		return $this->getPackageBasePath($package);
+	}
+
+	/**
+	 * @param PackageInterface $package
+	 * @return string
+	 */
 	protected function getPackageBasePath(PackageInterface $package) {
 		$this->initializeVendorDir();
 
